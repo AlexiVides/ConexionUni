@@ -454,19 +454,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ns_al\\.nuget\\packages\\": {}
+    "C:\\Users\\alexi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ns_al\\OneDrive\\Escritorio\\Lic\\ConexionSqlTrabajo\\ConexionSqlTrabajo\\ConexionSqlTrabajo.csproj",
+      "projectUniqueName": "C:\\Users\\alexi\\Documents\\GitHub\\ConexionUni\\ConexionSqlTrabajo\\ConexionSqlTrabajo\\ConexionSqlTrabajo.csproj",
       "projectName": "ConexionSqlTrabajo",
-      "projectPath": "C:\\Users\\ns_al\\OneDrive\\Escritorio\\Lic\\ConexionSqlTrabajo\\ConexionSqlTrabajo\\ConexionSqlTrabajo.csproj",
-      "packagesPath": "C:\\Users\\ns_al\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ns_al\\OneDrive\\Escritorio\\Lic\\ConexionSqlTrabajo\\ConexionSqlTrabajo\\obj\\",
+      "projectPath": "C:\\Users\\alexi\\Documents\\GitHub\\ConexionUni\\ConexionSqlTrabajo\\ConexionSqlTrabajo\\ConexionSqlTrabajo.csproj",
+      "packagesPath": "C:\\Users\\alexi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alexi\\Documents\\GitHub\\ConexionUni\\ConexionSqlTrabajo\\ConexionSqlTrabajo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ns_al\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\alexi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
