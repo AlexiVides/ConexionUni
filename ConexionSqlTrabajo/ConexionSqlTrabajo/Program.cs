@@ -157,8 +157,8 @@ namespace ConexionSqlTrabajo
                     if (opc == 5)
                     {
                         //Se cierra el programa
-                        break;
                         Console.WriteLine("El programa se a cerrado");
+                        break;                     
                         connection.Close();
                     }
                 }
