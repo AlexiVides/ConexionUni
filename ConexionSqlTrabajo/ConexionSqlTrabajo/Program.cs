@@ -1,4 +1,8 @@
 ﻿using System.Data.SqlClient;
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ConexionSqlTrabajo
 {
@@ -12,7 +16,7 @@ namespace ConexionSqlTrabajo
             //string InitialCatalog = "Universidad";
             ////Autentiticacion
             //string IntegratedSecurity = "SSPI";
-            string connectionString = "Data Source=LAPTOP-G5GPCEC8;Initial Catalog=Universidad;Integrated Security=SSPI";
+            string connectionString = "Data Source=LAPTOP-2B7JL8HS\\SQLEXPRESS;Initial Catalog=Universidad;Integrated Security=SSPI";
                 
             try
             {
@@ -38,7 +42,8 @@ namespace ConexionSqlTrabajo
                     Console.WriteLine("----------------------");
                     Console.WriteLine("1-Ingresar un Registro");
                     Console.WriteLine("2-Ver registro");
-                    Console.WriteLine("3- Salir");
+                    Console.WriteLine("3-Ver registro");
+                    Console.WriteLine("4- Salir");
                     Console.WriteLine("----------------------");
                     int opc = Convert.ToInt32(Console.ReadLine());
 
@@ -96,7 +101,27 @@ namespace ConexionSqlTrabajo
                         }
                         connection1.Close();
                     }
-                    if(opc == 3)
+                    if (opc == 3)
+                    {
+                        Console.WriteLine("Ingrese el id que se desea eliminar");
+                        int iden = Convert.ToInt32(Console.ReadLine());
+                        string delete = "delete from Estudiante where id =  '" + iden + "' ";
+
+                        try
+                        {
+
+                            SqlCommand comando = new SqlCommand(delete, connection1);
+                            comando.ExecuteNonQuery();
+                            Console.WriteLine("Se ha eliminado correctamente");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Ha ocurrido un error" + ex.Message);
+
+                        }
+                        connection1.Close();
+                    }
+                    if (opc == 4)
                     {
                         break;
                         connection.Close();

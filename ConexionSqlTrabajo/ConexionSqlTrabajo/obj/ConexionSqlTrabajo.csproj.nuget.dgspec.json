@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alexi\\Documents\\GitHub\\ConexionUni\\ConexionSqlTrabajo\\ConexionSqlTrabajo\\ConexionSqlTrabajo.csproj": {}
+    "C:\\Users\\Monta\\OneDrive\\Documents\\GitHub\\Clases-generales\\ConexionUni\\ConexionSqlTrabajo\\ConexionSqlTrabajo\\ConexionSqlTrabajo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alexi\\Documents\\GitHub\\ConexionUni\\ConexionSqlTrabajo\\ConexionSqlTrabajo\\ConexionSqlTrabajo.csproj": {
+    "C:\\Users\\Monta\\OneDrive\\Documents\\GitHub\\Clases-generales\\ConexionUni\\ConexionSqlTrabajo\\ConexionSqlTrabajo\\ConexionSqlTrabajo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexi\\Documents\\GitHub\\ConexionUni\\ConexionSqlTrabajo\\ConexionSqlTrabajo\\ConexionSqlTrabajo.csproj",
+        "projectUniqueName": "C:\\Users\\Monta\\OneDrive\\Documents\\GitHub\\Clases-generales\\ConexionUni\\ConexionSqlTrabajo\\ConexionSqlTrabajo\\ConexionSqlTrabajo.csproj",
         "projectName": "ConexionSqlTrabajo",
-        "projectPath": "C:\\Users\\alexi\\Documents\\GitHub\\ConexionUni\\ConexionSqlTrabajo\\ConexionSqlTrabajo\\ConexionSqlTrabajo.csproj",
-        "packagesPath": "C:\\Users\\alexi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexi\\Documents\\GitHub\\ConexionUni\\ConexionSqlTrabajo\\ConexionSqlTrabajo\\obj\\",
+        "projectPath": "C:\\Users\\Monta\\OneDrive\\Documents\\GitHub\\Clases-generales\\ConexionUni\\ConexionSqlTrabajo\\ConexionSqlTrabajo\\ConexionSqlTrabajo.csproj",
+        "packagesPath": "C:\\Users\\Monta\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Monta\\OneDrive\\Documents\\GitHub\\Clases-generales\\ConexionUni\\ConexionSqlTrabajo\\ConexionSqlTrabajo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\alexi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Monta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,12 +39,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "System.Data.SqlClient": {
-              "target": "Package",
-              "version": "[4.8.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -55,12 +49,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     }
