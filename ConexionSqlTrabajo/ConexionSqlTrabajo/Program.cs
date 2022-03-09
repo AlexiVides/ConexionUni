@@ -16,8 +16,8 @@ namespace ConexionSqlTrabajo
             //string InitialCatalog = "Universidad";
             ////Autentiticacion
             //string IntegratedSecurity = "SSPI";
-            string connectionString = "Data Source=LAPTOP-2B7JL8HS\\SQLEXPRESS;Initial Catalog=Universidad;Integrated Security=SSPI";
-                
+            string connectionString = "Data Source=LAPTOP-A720PLQ0;Initial Catalog=Universidad;Integrated Security=SSPI";
+                //Realizamos la conexion a la base de datos
             try
             {
                 int x = 1;
@@ -25,30 +25,29 @@ namespace ConexionSqlTrabajo
                 SqlConnection connection = new SqlConnection(connectionString);
                 connection.Open();
                 Console.WriteLine("--------------------------------------------------------------------------------");
+                Console.WriteLine("-------------------BIENVENIDO------------------");
                 Console.WriteLine("La base de datos  se ha conectado correctamente");
                 Console.WriteLine("Estado de la conexion" + connection.State.ToString());
                 Console.WriteLine("--------------------------------------------------------------------------------");
 
-                
-                
-
-
-
                 while (true)
                 {
+                    //realizamos un menu donde el usuario pueda elegir una opcion
                     SqlConnection connection1 = new SqlConnection(connectionString);
                     connection1.Open();
                     Console.WriteLine("Menu");
                     Console.WriteLine("----------------------");
                     Console.WriteLine("1-Ingresar un Registro");
                     Console.WriteLine("2-Ver registro");
-                    Console.WriteLine("3-Ver registro");
-                    Console.WriteLine("4- Salir");
+                    Console.WriteLine("3-Eliminar");
+                    Console.WriteLine("4-Actualizar");
+                    Console.WriteLine("5- Salir");
                     Console.WriteLine("----------------------");
                     int opc = Convert.ToInt32(Console.ReadLine());
 
                     if (opc == 1)
                     {
+                        //aca realizamos los insert
                         Console.WriteLine("Ingresar el nombre del estudiante");
                         string nombre = Console.ReadLine();
                         Console.WriteLine("Ingresar el apellido");
@@ -67,6 +66,7 @@ namespace ConexionSqlTrabajo
                            
                             SqlCommand comando = new SqlCommand(insert, connection1);
                             comando.ExecuteNonQuery();
+                            Console.WriteLine("Se ha registro correctamente");
                         }
                         catch (Exception ex)
                         {
@@ -80,7 +80,7 @@ namespace ConexionSqlTrabajo
                         
                         try
                         {
-                            
+                            //aca mostramos
                             string cadena = "select * from Estudiante";
                             SqlCommand comando = new SqlCommand(cadena, connection1);
                             SqlDataReader lector = comando.ExecuteReader();
@@ -103,6 +103,7 @@ namespace ConexionSqlTrabajo
                     }
                     if (opc == 3)
                     {
+                        //Realiazamos el delete
                         Console.WriteLine("Ingrese el id que se desea eliminar");
                         int iden = Convert.ToInt32(Console.ReadLine());
                         string delete = "delete from Estudiante where id =  '" + iden + "' ";
@@ -123,53 +124,44 @@ namespace ConexionSqlTrabajo
                     }
                     if (opc == 4)
                     {
+                        //Realizamos el update
+                        Console.WriteLine("Ingrese el id que se desea actualizar");
+                        int iden = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Ingresar el nombre del estudiante");
+                        string nombre = Console.ReadLine();
+                        Console.WriteLine("Ingresar el apellido");
+                        string apellido = Console.ReadLine();
+                        Console.WriteLine("Ingresar la edad");
+                        int edad = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Ingresar el codigo");
+                        string codigo = Console.ReadLine();
+                        Console.WriteLine("Ingresar el telefono");
+                        string telefono = Console.ReadLine();
+
+                        string insert = "update Estudiante set nombre = '"+ nombre + "' , apellido = '"+apellido+"',edad = "+edad+", codigo = '"+ codigo + "', telefono = '"+ telefono + "' where id = '"+iden+"'";
+
+                        try
+                        {
+
+                            SqlCommand comando = new SqlCommand(insert, connection1);
+                            comando.ExecuteNonQuery();
+                            Console.WriteLine("Se ha actualizado correctamente");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Ha ocurrido un error" + ex.Message);
+
+                        }
+                        connection1.Close();
+                    }
+                    if (opc == 5)
+                    {
+                        //Se cierra el programa
                         break;
+                        Console.WriteLine("El programa se a cerrado");
                         connection.Close();
                     }
                 }
-
-
-
-
-
-
-
-
-                //string cadena = "select * from departamento";
-                //Console.WriteLine("Ingresar departamento");
-                //string depar = Console.ReadLine();
-                //string insert = "insert into departamento(NombreDepart) values('" + depar + "')";
-                //try
-                //{
-                //    SqlCommand comando = new SqlCommand(insert, connection);
-                //    comando.ExecuteNonQuery();
-                //}
-                //catch (Exception ex)
-                //{
-                //    Console.WriteLine("Ha ocurrido un error" + ex.Message);
-                //    connection.Close();
-                //}
-                //try
-                //{
-
-                //    SqlCommand comando = new SqlCommand(cadena, connection);
-                //    SqlDataReader lector = comando.ExecuteReader();
-
-                //    Console.WriteLine("Id     " + "  Nombre");
-                //    while (lector.Read())
-                //    {
-
-                //        Console.WriteLine(lector.GetValue(0).ToString() + "     " + lector.GetValue(1).ToString());
-                //    }
-                //}
-                //catch (Exception ex)
-                //{
-                //    Console.WriteLine("Ha ocurrido un error" + ex.Message);
-                //    Console.WriteLine("La base de datos ha sido cerrada");
-                //    connection.Close();
-                //}
-
-
 
             }
             catch (Exception ex)
